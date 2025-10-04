@@ -9,7 +9,7 @@ jobs:
       - name: Goodbye Me
         run: echo "Goodbye, Ram! See you later!"
   second-job:
-    runson: windows-latest
+    runs-on: windows-latest
     steps:
       - name: Greet and say goodbye!
         run: |
