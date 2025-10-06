@@ -16,3 +16,8 @@ jobs:
         run: |
           echo "Hello, Ram! How are you?"
           echo "Goodbye, Ram! See you later!"
+  third-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output the github context info
+        run: echo "${{ github}}"
