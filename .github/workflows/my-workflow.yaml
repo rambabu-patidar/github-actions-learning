@@ -1,5 +1,5 @@
 name: My First Workflow
-on: workflow_dispatch
+on: [push, workflow_dispatch]
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -9,6 +9,7 @@ jobs:
       - name: Goodbye Me
         run: echo "Goodbye, Ram! See you later!"
   second-job:
+    needs: first-job
     runs-on: windows-latest
     steps:
       - name: Greet and say goodbye!
